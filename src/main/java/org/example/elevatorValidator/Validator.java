@@ -3,6 +3,11 @@ package org.example.elevatorValidator;
 public class Validator {
 
     public static boolean isValid(int countFloors, String log) {
+
+        if (log == null || log.isBlank()) {
+            return false;
+        }
+
         char[] letters = log.toUpperCase().toCharArray();
 
         int floor = 1;
