@@ -48,6 +48,11 @@ class ValidatorTest {
     }
 
     @Test
+    void threeFloor4 (){
+        assertFalse(isValid(3, "GGDDDGGDDDG"));
+    }
+
+    @Test
     void fourFloor (){
         assertTrue(isValid(4, "DDD"));
     }
@@ -69,36 +74,30 @@ class ValidatorTest {
 
     @Test
     void fourFloor5 (){
-        assertTrue(isValid(6, "gggddddd"));
-    }
-
-    @Test
-    void fourFloor7 (){
-        assertTrue(isValid(6, "GGGDDDDDGGG"));
-    }
-
-    @Test
-    void fourFloor6 (){
         assertFalse(isValid(4, "GGGDDDDDGGGGDDDDDG"));
     }
 
     @Test
-    void fourFloor8 (){
+    void sixFloor (){
+        assertTrue(isValid(6, "gggddddd"));
+    }
+
+    @Test
+    void sixFloor1 (){
+        assertTrue(isValid(6, "GGGDDDDDGGG"));
+    }
+    @Test
+    void eightFloor (){
         assertFalse(isValid(8, "GGDDDDDDDDDD"));
     }
 
     @Test
-    void fourFloor9 (){
-        assertFalse(isValid(3, "GGDDDGGDDDG"));
-    }
-
-    @Test
-    void fourFloor10 (){
+    void eightFloor1 (){
         assertTrue(isValid(8, "GGDDDDDDD"));
     }
 
     @Test
-    void fourFloor11 (){
+    void eightFloor2 (){
         assertTrue(isValid(8, "DDDDDDDGG"));
     }
 
