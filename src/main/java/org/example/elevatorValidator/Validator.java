@@ -20,7 +20,10 @@ public class Validator {
             } else {
                 floor--;
             }
-            if(floor % countFloors >= countFloors){
+            if( floor!= 0 && countFloors % floor >= countFloors){
+                return false;
+            }
+            if(floor > countFloors || floor <= -countFloors){
                 return false;
             }
             if (letter == lastChar) {

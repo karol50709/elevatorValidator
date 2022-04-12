@@ -53,6 +53,11 @@ class ValidatorTest {
     }
 
     @Test
+    void threeFloor5 (){
+        assertFalse(isValid(3, "GGDGGDGGDGGDGG"));
+    }
+
+    @Test
     void fourFloor (){
         assertTrue(isValid(4, "DDD"));
     }
